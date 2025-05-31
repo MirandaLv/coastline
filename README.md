@@ -7,8 +7,20 @@ This post includes code to:
    2. Reprojecting individual sentinel band (.tif) to WGS-84.
    3. Merging the 10-m bands into a multispectral imagery.
    4. Creating imagery patches and saved into 'data/sentinel/patches' for imagery inferencing.
-3. A binary water/land detection model has been trained with the Earth Surface Water Dataset ((https://zenodo.org/records/5205674)), and the weight is saved under the 'weights' folder.
+3. A binary water/land detection model has been trained (20 epochs) with the Earth Surface Water Dataset ((https://zenodo.org/records/5205674)), and the weight is saved under the 'weights' folder.
 4. Model prediction of the generated imagery patches, and mosaic the output imagery prediction to the raw imagery size.
+
+
+
+
+
+TODO:
+- generate environment.yaml
+- add weights download link
+- add a brief writeup
+- rerun code following each step
+
+
 
 
 # Running the code
@@ -31,7 +43,7 @@ Run this command on terminal:
 `python data_preprocessing.py`
 
 ## 3. Model Training with surface water dataset
-A water/land classification model is pretrained (20 epoches for testing) with a subset of data from Earth Surface Water Dataset (https://zenodo.org/records/5205674). The model weight is saved under the weights folder.
+A water/land classification model is pretrained (20 epochs for testing) with a subset of data from Earth Surface Water Dataset (https://zenodo.org/records/5205674). The model weight is saved under the weights folder.
 
 ## 4. Model Inference and Mapping the result
 - Model inference: Run main.py to load the model, and predict water/land with the patches created in step 2, and stitch the predicted patches together.

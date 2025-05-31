@@ -69,6 +69,9 @@ def search_sentinel_items(client: Client, bbox: List[float], start: str, end: st
 
 def main():
 
+    if not ACCESS_KEY or not SECRET_KEY:
+        raise("Fill the ACCESS KEY and SECRET KEY")
+
     client = Client.open(STAC_URL)
     bbox = get_aoi_bbox(AOI_PATH)
 
