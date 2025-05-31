@@ -19,6 +19,7 @@ TODO:
 - add weights download link
 - add a brief writeup
 - rerun code following each step
+- credentials are removed
 
 
 
