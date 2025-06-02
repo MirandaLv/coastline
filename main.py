@@ -18,10 +18,10 @@ def main(args):
     dataloader = DataLoader(dataset, batch_size=args.batch_size, shuffle=False)
 
     output_dir = os.path.join(args.output_dir, "inference_outputs")
-    # run_inference(model, dataloader, output_dir, device)
+    run_inference(model, dataloader, output_dir, device)
 
     if args.stitch:
-        print("Stitching??")
+        print("Stitching...")
         output_mosaic_path = os.path.join(args.output_dir, "stitched_output.tif")
         stitch_tiff_patches(output_dir, output_mosaic_path)
 
